@@ -25,3 +25,5 @@ use std/dirs
 alias ll = ls -l
 alias pn = pnpm
 alias e = explorer.exe
+
+oh-my-posh init nu --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/probua.minimal.omp.json'
