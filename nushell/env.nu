@@ -1,1 +1,1 @@
-$env.PATH = ($env.PATH | append "/home/linuxbrew/.linuxbrew/Cellar/oh-my-posh/28.7.0/bin")
+$env.PATH = ($env.PATH | append "/home/linuxbrew/.linuxbrew/Cellar/oh-my-posh/28.7.0/bin"| append "/home/dodok8/.deno/bin")
