@@ -27,6 +27,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 #pnpm
 alias pn="pnpm"
+alias ll="ls -l"
+alas e = open
 
 #psql
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
