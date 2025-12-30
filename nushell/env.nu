@@ -1,0 +1,1 @@
+$env.PATH = ($env.PATH | append "/home/linuxbrew/.linuxbrew/Cellar/oh-my-posh/28.7.0/bin")

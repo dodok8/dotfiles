@@ -27,6 +27,7 @@ claude mcp add -s user -t http deepwiki https://mcp.deepwiki.com/mcp
 ```
 mkdir -p ~/.config/nushell
 ln -sf $PWD/nushell/config.nu ~/.config/nushell/config.nu
+ln -sf $PWD/nushell/env.nu ~/.config/nushell/env.nu
 ```
 
 ### Mac
