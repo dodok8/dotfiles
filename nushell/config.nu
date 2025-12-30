@@ -17,6 +17,7 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
+$env.config.show_banner = false
 $env.config.buffer_editor = "code"
 $env.config.history.file_format = "sqlite"
 use std/dirs
