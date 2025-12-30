@@ -21,6 +21,6 @@ $env.config.buffer_editor = "code"
 $env.config.history.file_format = "sqlite"
 use std/dirs
 
-alias ll = "ls -l"
-alias pn = "pnpm"
-alias e = "explorer.exe"
+alias ll = ls -l
+alias pn = pnpm
+alias e = explorer.exe
