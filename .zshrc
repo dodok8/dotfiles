@@ -23,12 +23,11 @@ source ~/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# lsd
-
 #pnpm
 alias pn="pnpm"
-alias ll="ls -l"
-alas e = open
+alias ll="lsd -l"
+alias ls="lsd"
+alias e="open"
 
 #psql
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
@@ -40,3 +39,6 @@ export PATH=~/.npm-global/bin:$PATH
 . "$HOME/.local/bin/env"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+
+##oh-my-posh
+eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/onehalf.minimal.omp.json')"
