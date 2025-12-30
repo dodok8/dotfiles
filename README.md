@@ -36,6 +36,14 @@ mkdir -p "$HOME/Library/Application Support/nushell/"
 ln -sf "$PWD/nushell/config.nu" "$HOME/Library/Application Support/nushell/config.nu"
 ```
 
+## zsh
+
+### Mac
+
+```
+ln -sf $PWD/.zshrc ~/.zshrc
+```
+
 ### Windows (PowerShell, as admin)
 
 ```
