@@ -30,3 +30,5 @@ oh-my-posh init nu --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 ^mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
+
+zoxide init nushell | save -f ~/.zoxide.nu
