@@ -35,3 +35,6 @@ eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDob
 
 #mise
 eval "$(~/.local/bin/mise activate zsh)"
+
+#zoxide
+eval "$(zoxide init zsh)"
