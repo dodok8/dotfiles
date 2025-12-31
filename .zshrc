@@ -1,8 +1,5 @@
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
-# z
-source ~/zsh/zsh-z.plugin.zsh
-
 # auto suggestion
 source ~/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
