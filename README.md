@@ -8,6 +8,8 @@
 mkdir ~/.claude/commands
 ln -sf ./.claude/commands/commit.md ~/.claude/commands/commit.md
 
+ln -sf ./.claude/CLAUDE.md ~/.claude/CLAUDE.md
+
 claude mcp add -s user -t http deepwiki https://mcp.deepwiki.com/mcp
 ```
 
@@ -15,6 +17,8 @@ claude mcp add -s user -t http deepwiki https://mcp.deepwiki.com/mcp
 
 ```
 New-Item -ItemType Directory -Path "$env:USERPROFILE\.claude\commands" -Force
+New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\CLAUDE.md" -Target "$PWD\.claude\CLAUDE.md"
+
 New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\commands\commit.md" -Target "$PWD\.claude\commands\commit.md"
 
 claude mcp add -s user -t http deepwiki https://mcp.deepwiki.com/mcp
