@@ -32,3 +32,4 @@ mkdir ($nu.data-dir | path join "vendor/autoload")
 ^mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
 
 zoxide init nushell | save -f ~/.zoxide.nu
+source $"($nu.home-path)/.cargo/env.nu"
