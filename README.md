@@ -2,56 +2,58 @@
 
 ## claude
 
-### Linux / Mac
+```zsh
+mkdir -p ~/.claude/commands
 
-```
-mkdir ~/.claude/commands
-ln -sf ./.claude/commands/commit.md ~/.claude/commands/commit.md
-
-ln -sf ./.claude/CLAUDE.md ~/.claude/CLAUDE.md
+ln -sf "$PWD/.claude/commands/commit.md" ~/.claude/commands/commit.md
+ln -sf "$PWD/.claude/CLAUDE.md" ~/.claude/CLAUDE.md
 
 claude mcp add -s user -t http deepwiki https://mcp.deepwiki.com/mcp
+````
+
+## codex
+
+Codex는 전역 지침으로 `~/.codex/AGENTS.md`를 읽는다. 이 저장소의 `.codex/AGENTS.md`를 심볼릭 링크로 연결하면, 어느 위치에서 Codex를 실행하더라도 같은 기본 지침을 사용할 수 있다.
+
+```zsh
+mkdir -p ~/.codex
+
+ln -sf "$PWD/.codex/AGENTS.md" ~/.codex/AGENTS.md
 ```
 
-### Windows (PowerShell, as admin)
+적용 여부 확인:
 
-```
-New-Item -ItemType Directory -Path "$env:USERPROFILE\.claude\commands" -Force
-New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\CLAUDE.md" -Target "$PWD\.claude\CLAUDE.md"
-
-New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\commands\commit.md" -Target "$PWD\.claude\commands\commit.md"
-
-claude mcp add -s user -t http deepwiki https://mcp.deepwiki.com/mcp
+```zsh
+ls -l ~/.codex/AGENTS.md
+readlink ~/.codex/AGENTS.md
 ```
 
-## nushell
+Codex에서 확인:
 
-### Linux
-
-```
-mkdir -p ~/.config/nushell
-ln -sf $PWD/nushell/config.nu ~/.config/nushell/config.nu
-ln -sf $PWD/nushell/env.nu ~/.config/nushell/env.nu
+```zsh
+codex --ask-for-approval never "Summarize the current instructions."
 ```
 
-### Mac
+### Project-local AGENTS.md
 
+특정 프로젝트에만 이 지침을 적용하려면, 해당 프로젝트 루트에 `AGENTS.md`를 심볼릭 링크로 연결한다.
+
+```zsh
+ln -sf "$PWD/.codex/AGENTS.md" /path/to/project/AGENTS.md
 ```
-mkdir -p "$HOME/Library/Application Support/nushell/"
-ln -sf "$PWD/nushell/config.nu" "$HOME/Library/Application Support/nushell/config.nu"
+
+예시:
+
+```zsh
+ln -sf "$PWD/.codex/AGENTS.md" ~/work/my-project/AGENTS.md
 ```
 
 ## zsh
 
-### Mac
-
-```
-ln -sf $PWD/.zshrc ~/.zshrc
+```zsh
+ln -sf "$PWD/.zshrc" ~/.zshrc
 ```
 
-### Windows (PowerShell, as admin)
+## About
 
-```
-New-Item -ItemType Directory -Path "$env:APPDATA\nushell" -Force
-New-Item -ItemType SymbolicLink -Path "$env:APPDATA\nushell\config.nu" -Target "$PWD\nushell\config.nu"
-```
+Gaebalgom's dotfile
